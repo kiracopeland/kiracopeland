@@ -14,34 +14,9 @@
 
 //when content in a text field is empty, make the error label visabile, and change spacing on input fields appropriatly
 
-//function to set a new Google Map style
-function initMap() {
-    
-    var styledMapTypeDay = new google.maps.StyledMapType(
-        [
-            //map styles go here
-        ],
-        {name: "custom"}
-    );
-   
-    //create the parameters for a new Google Map and insert it into the webpage
-    function initialize() {
-        map = new google.maps.Map(document.getElementById("googleMap"), {
-            center: {lat: -35.281959, lng: 149.128656},
-            zoom: 15,
-            disableDefaultUI: true,
-            mapTypeControlOptions: {
-                mapTypeId: ["custom"]
-            }
-        }
-    )}
-    //trigger the initialize function
-    initialize();
-};
-
 //when an input field is focused, trigger an animation where the bottom border transitions from write to yellow, from left to right. This is to signify the user's currently selected field.
 $('input').focus (function() {
-    var currentSelection = this.parentElement;
+	var currentSelection = this.parentElement;
     currentSelection.style.borderBottom = "solid 2px #e0d21e";
 })
 
@@ -60,7 +35,6 @@ $('textarea').blur (function() {
     var currentSelection = this.parentElement;
     currentSelection.style.borderBottom = "solid 2px #ffffff";
 })
-
 
 //When the user clicks send to submit, first perform a test where we test whether any field is empty (does this need to a converted to a string first/ the value stored in a variable first?). If it is, grab the test of the empty field, display it's empty field message and don't go ahead with the plan. 
 

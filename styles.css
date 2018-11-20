@@ -1,6 +1,5 @@
 * {
-    margin: 0;
-    padding: 0;
+	margin: 0;
 }
 *:focus {
     outline: none; !important;
@@ -18,15 +17,19 @@ body {
     font-weight: 400;
     font-size: 16px;
     font-style: normal;
+	line-height: 20px;
     color: #a9a9a9;
 }
 h1 {
     font-family: 'Poiret One', cursive;
-    font-size: 42px;
+    font-size: 32px;
     color: #6d6d6d;
 }
 h2 {
-    margin-bottom: 20px;
+	font-family: 'Poiret One', cursive;
+	font-size: 24px;
+    margin-bottom: 30px;
+	color: #6d6d6d;
 }
 section {
     display: block;
@@ -42,58 +45,75 @@ a:hover {
     color: #e0d21e;
     transition: 0.4s;
 }
+.backToTop {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 50px;
+	height: 50px;
+	margin-right: 30px;
+	margin-bottom: 45px;
+	border-radius: 100px;
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: 1000000000;
+	cursor: pointer;
+}
+.backToTop:hover {
+	background-color: #e0d21e;
+	transition: 0.8s;
+}
 
 /*///////-Navigation-///////*/
 
-#primaryNavBar {
+.primaryNavBar {
+	position: absolute;
+	display: block;
     width: 100%;
     height: 80px;
-    border-bottom: solid 1px #ffffff;
+	background-color: rgba(0, 0, 0, 0.2);
+    border-bottom: solid 1px #aaaaaa;
     z-index: 100;
 }
-#logo {
+.logo {
     display: inline-block;
     float: left;
     clear: none;
     margin: 10px 0px 10px 20px;
-    font-size: 24px;
+   
 }
-#logo img {
+.logo img {
     width: auto;
     height: 60px;
     display: block;
-    color: #e0d21e;
-    border-right: solid 0.1px #e0d21e;
-    margin-right: 10px;
-    padding-right: 10px;
 }
-#logoTitle {
+.logoTitle {
     float: left;
     clear: none;
-    margin-left: 50px;
-    margin-top: -45px;
+    margin-left: 40px;
+    margin-top: -40px;
     color: #e0d21e; 
+	 font-size: 28px;
 }
-#pageLinks {
+.pageLinks {
     text-align: right;
 }
 nav li {
     display: inline-block;
-    padding-right: 10px;
-    margin-right: 5px;
+    padding-right: 15px;
+    margin-right: 15px;
 }
-#primaryNavBar li {
-	margin-top: 33px;
-    border-right: solid 1.2px #a9a9a9;
+.primaryNavBar li {
+	margin-top: 32px;
+    border-right: solid 1.2px #cccccc;
 }
-#primaryNavBar li:last-of-type {
+.primaryNavBar li:last-of-type {
     border-right: none;
     margin-right: 20px;
 }
 
 /*///////-Hero Banner-///////*/
 
-#intro {
+.intro {
     margin: 0;
 	padding: 0;
     color: #ffffff;
@@ -117,24 +137,27 @@ nav li {
     transform: translateX(-50%);
 }
 .introInfo {
+	margin-top: 250px;
     position: absolute;
 }
-#intro h1 {
+.intro h1 {
     width: 90%;
     display: inline-block;
-    margin: 240px auto 50px auto;
-	/*//- adjust margin top when you get new bg -//*/
+	margin-bottom: 30px;
+	font-size: 42px;
+	line-height: 42px;
     color: #ffffff;
 }
-#intro p {
+.intro p {
     width: 70%;
     margin: 0 auto 40px auto;
-    font-size: 24px;
+    font-size: 22px;
+	line-height: 28px;
 }
 button {
     margin-bottom: 30px;
     padding: 15px 25px 15px 25px;
-    background-color: #e0d21e;
+    background-color: rgba(224, 210, 30, 0.9);
     border: none;
     border-radius: 25px;
     font-family: 'Raleway', sans-serif;
@@ -147,28 +170,28 @@ button {
 
 /*///////-About-///////*/
 
-#about img {
+.about img {
     display: inline-block;
     width: 300px;
     margin-right: 10px;
 }
-#about div {
+.about div {
     display: inline-block;
     vertical-align: top;
     width: 45%;
     margin-left: 10px;
+	text-align: left;
 }
-#about h1 {
-    text-align: left;
+.about h2 {
+	margin-top: 5px;
 }
-#about p {
+.about p {
     margin-bottom: 20px;
-    text-align: left;
 }
 
 /*///////-Skills-///////*/
 
-#skills {
+.skills {
 	background: -webkit- #f8f8f8;
     background: -o-#f8f8f8;
     background: -moz-#f8f8f8;
@@ -180,7 +203,7 @@ button {
 	width: 40%;
 }
 .individualSkill img {
-	width: 60px;
+	width: 45px;
 	border: solid 2px #e0d21e;
 	border-radius: -webkit- 100px;
     border-radius: -o-100px;
@@ -188,16 +211,18 @@ button {
     border-radius: 100px;
 	float: left;
 	clear: none;
-	margin-right: 30px;
-	margin-bottom: 100px;
-	padding: 20px;
+	margin-right: 40px;
+	margin-bottom: 120px;
+	padding: 15px;
 }
 .individualSkill:nth-child(even) {
 	margin-left: 40px;
 }
 .individualSkill h3 {
 	text-align: left;
+	margin-top: 5px;
 	margin-bottom: 15px;
+	font-size: 20px;
 }
 .individualSkill p {
 	text-align: left;
@@ -205,8 +230,28 @@ button {
 
 /*///////-Gallery-///////*/
 
-#gallery {
+.gallery {
 	padding-bottom: 0px;
+}
+.gallery h2 {
+	margin-bottom: 20px;
+}
+.galleryTopics {
+	margin-bottom: 35px;
+	padding-left: 0px;
+}
+.galleryTopics li {
+	display: inline-block;
+	margin-left: 20px;
+}
+.galleryTopics li p {
+	padding-bottom: 5px
+}
+.current {
+	border-bottom: solid 1px #e0d21e;
+	color: #e0d21e;
+}
+.galleryContainer {
 }
 .project {
 	background: -webkit- #ffffff;
@@ -219,23 +264,52 @@ button {
     margin-right: 20px;
     margin-bottom: 25px;
 }
+.projectImage {
+	width: 400px;
+	height: 400px;
+	background-color: aqua;
+}
 .project img {
     width: 400px;
 	margin-bottom: 10px;
+	padding-top: 0%
 }
-.project:nth-child(3) {
-    margin-right: 0px;
+.singleScreen {
+	margin-top: 75px;
 }
-#lastProject {
-	visibility: hidden;
+.applicationLarge {
+	margin-top: 20px;
+}
+.applicationSmall {
+	margin-top: 50px;
+}
+.findo {
+	background-color: #d9a776;
+}
+.seasonal {
+	background-color: #f9f4f8;
+}
+.artventure {
+	background-color: #c8fed7;
+}
+.darkSky {
+	background-color: #ceedf7;
+}
+.cycleSafe {
+	background-color: #fee0e6;
+}
+.yuni {
+	background-color: #d9feff;
 }
 .project h3 {
-	font-size: 22px;
-	margin-bottom: 5px;
+	font-size: 20px;
+	margin-top: 20px;
+	margin-bottom: 0px;
 }
 .project h4 {
-	font-size: 18px;
-	padding-bottom: 15px;
+	font-size: 16px;
+	margin-top: 5px;
+	margin-bottom: 10px;
 }
 .project p {
 	padding: 0 15px 15px 15px;
@@ -243,10 +317,14 @@ button {
 
 /*///////-Testimonies-///////*/
 
+.testimonies {
+	display: block;
+	height: 100px;
+}
 .testimonyBG {
 	position: absolute;
     width: 100%;
-    height: 430px;
+    height: 500px;
     overflow: hidden;
 }
 .testimonyBG img {
@@ -263,7 +341,7 @@ button {
 .infoOverlay {
 	position: absolute;
 }
-#testimonies h2 {
+.testimonies h2 {
 	padding-top: 20px;
 	color: #ffffff;
 }
@@ -279,9 +357,7 @@ button {
 	width: 120px;
 	border-radius: 100px;
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 15px;
+	margin: 0px auto 15px auto;
 }
 .individualTestimony quote {
 	color: #ffffff;
@@ -291,6 +367,7 @@ button {
 }
 .testimonyName {
 	margin-top: 15px;
+	margin-bottom: 5px;
 	font-size: 20px;
 }
 .testimonyOccupation {
@@ -300,7 +377,7 @@ button {
 
 /*///////-Contact-///////*/
 
-#contact {
+.contact {
     margin: 400px 20px 0 20px;
 }
 .formPhoto img {
@@ -308,7 +385,7 @@ button {
 	clear: none;
 	width: 600px;
 }
-#form {
+.form {
     width: 45%;
 }
 fieldset {
@@ -318,10 +395,11 @@ fieldset {
 }
 legend {
     font-size: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #6d6d6d;
 }
 fieldset p {
+	margin-top: 5px;
     margin-bottom: 15px;
 }
 .formIcon {
@@ -334,10 +412,13 @@ fieldset p {
 label {
     visibility: hidden;
     display: block;
-    text-align: right;
+    text-align: left;
     margin: 0px 10px 5px 0px;
     font-size: 12px;
-    color: red;
+    color: #e05850;
+}
+label span {
+	margin-right: 5px;
 }
 .outline {
     border: solid 2px #ffffff;
@@ -405,45 +486,50 @@ textarea:focus {
 
 /*///////-Footer-///////*/
 
-footer {
-    padding: 20px 0;
-    background: -webkit- #494846;
+.footerContainer {
+	position: absolute;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+	background: -webkit- #494846;
     background: -o-#494846;
     background: -moz-#494846;
-    background: #494846;
+	background: #494846;
 }
-#socialMedia {
-	width: 80%;
-	display: block;
-	margin-left: auto;
+.copyright {
+	position:absolute;
+	left: 0;
+	margin-left: 110px;
 	margin-right: auto;
-	padding-top: 25px;
-	padding-bottom: 25px;
-	border-bottom: solid 1px #6d6d6d; 
+	margin-top: 50px;
 }
-#socialMedia li {
-	display: inline;
-	margin-left: 10px;
-}
-#socialMedia img {
-	width: 35px;
-}
-#copyright {
-    display: block;
-}
-#copyright p:last-child {
+.copyright p:last-child {
     margin-top: 20px;
+}
+.socialMedia {
+	position: absolute;
+	right: 0;
+	margin-left: auto;
+	margin-right: 110px;
+	margin-top: 70px;
+}
+.socialMedia li {
+	display: inline;
+	margin-left: 15px;
+}
+.socialMediaIcon span {
+	font-size: 20px;
 }
 
 /*//- Fonts -//*/
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?rtec3w');
-  src:  url('fonts/icomoon.eot?rtec3w#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?rtec3w') format('truetype'),
-    url('fonts/icomoon.woff?rtec3w') format('woff'),
-    url('fonts/icomoon.svg?rtec3w#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?y0deh1');
+  src:  url('fonts/icomoon.eot?y0deh1#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?y0deh1') format('truetype'),
+    url('fonts/icomoon.woff?y0deh1') format('woff'),
+    url('fonts/icomoon.svg?y0deh1#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -463,16 +549,73 @@ footer {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-Profile:before {
+.icon-Left-Arrow:before {
   content: "\e901";
 }
-.icon-Email:before {
+.icon-Error-Mark:before {
   content: "\e900";
+  color: #e2574c;
 }
-.icon-Send:before {
+.icon-ArrowUp:before {
+  	content: "\e908";
+	position: absolute;
+	right: 28%;
+	top: 25%;
+	font-size: 20px;
+	color: #ffffff;
+	z-index: 10000000;
+}
+.icon-Behance:before {
+  content: "\e909";
+}
+.icon-CodePen:before {
+  content: "\e90a";
+}
+.icon-Github:before {
+  content: "\e90b";
+}
+.icon-Linkedin:before {
+  content: "\e90c";
+}
+.icon-Pinterest:before {
+  content: "\e90d";
+}
+.icon-Profile:before {
   content: "\e902";
 }
-.icon-Message:before {
+.icon-Email:before {
   content: "\e903";
 }
+.icon-Send:before {
+  content: "\e906";
+}
+.icon-Message:before {
+  content: "\e907";
+}
 
+/*//- Media Queries -//*/
+
+@media only screen and (max-width: 1180px) {
+		.formPhoto img {
+	width: 50%;
+}
+}
+@media only screen and (max-width: 1020px) {
+	.individualSkill img {
+		margin-bottom: 180px;
+	}
+	.formPhoto img {
+	display: none;
+	}
+	.form {
+    width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+
+	}
+}
+@media only screen and (max-width: 850px) {
+	.individualSkill img {
+		margin-bottom: 220px;
+	}
+}
