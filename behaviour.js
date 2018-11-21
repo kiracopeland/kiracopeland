@@ -35,7 +35,6 @@ $('textarea').blur (function() {
     var currentSelection = this.parentElement;
     currentSelection.style.borderBottom = "solid 2px #ffffff";
 })
-
 //When the user clicks send to submit, first perform a test where we test whether any field is empty (does this need to a converted to a string first/ the value stored in a variable first?). If it is, grab the test of the empty field, display it's empty field message and don't go ahead with the plan. 
 
 //If all fields are full, check the email field to make sure it's a proper email. If it isn't, grab it's missing message and change it to an invalid email message (this message will need to be changed back to default once the user clicks send again, just in case it's empty the next time).

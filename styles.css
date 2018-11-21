@@ -94,8 +94,26 @@ a:hover {
     color: #e0d21e; 
 	 font-size: 28px;
 }
+.secondaryLogo {
+	display: none;
+}
+.hamburgerMenu {
+	display: none;
+	float: left;
+	clear: none;
+	margin-left: 20px;
+	margin-top: 25px;
+}
+.hamburgerMenu span {
+	font-size: 30px;
+}
 .pageLinks {
     text-align: right;
+}
+.pageLinks span {
+	display: none;
+	margin-left: 8px;
+	font-size: 12px;
 }
 nav li {
     display: inline-block;
@@ -524,37 +542,43 @@ textarea:focus {
 /*//- Fonts -//*/
 
 @font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?y0deh1');
-  src:  url('fonts/icomoon.eot?y0deh1#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?y0deh1') format('truetype'),
-    url('fonts/icomoon.woff?y0deh1') format('woff'),
-    url('fonts/icomoon.svg?y0deh1#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'icomoon';
+  	src:  url('fonts/icomoon.eot?ideffw');
+  	src:  url('fonts/icomoon.eot?ideffw#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ideffw') format('truetype'),
+    url('fonts/icomoon.woff?ideffw') format('woff'),
+    url('fonts/icomoon.svg?ideffw#icomoon') format('svg');
+  	font-weight: normal;
+  	font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
+  	/* use !important to prevent issues with browser extensions that change fonts */
+  	font-family: 'icomoon' !important;
+  	speak: none;
+  	font-style: normal;
+  	font-weight: normal;
+  	font-variant: normal;
+  	text-transform: none;
+  	line-height: 1;
 
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  	/* Better Font Rendering =========== */
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-menu:before {
+  	content: "\e905";
+}
+.icon-Right-Arrow:before {
+  	content: "\e904";
+}
 .icon-Left-Arrow:before {
-  content: "\e901";
+  	content: "\e901";
 }
 .icon-Error-Mark:before {
-  content: "\e900";
-  color: #e2574c;
+  	content: "\e900";
+  	color: #e2574c;
 }
 .icon-ArrowUp:before {
   	content: "\e908";
@@ -566,56 +590,108 @@ textarea:focus {
 	z-index: 10000000;
 }
 .icon-Behance:before {
-  content: "\e909";
+  	content: "\e909";
 }
 .icon-CodePen:before {
-  content: "\e90a";
+  	content: "\e90a";
 }
 .icon-Github:before {
-  content: "\e90b";
+  	content: "\e90b";
 }
 .icon-Linkedin:before {
-  content: "\e90c";
+  	content: "\e90c";
 }
 .icon-Pinterest:before {
-  content: "\e90d";
+  	content: "\e90d";
 }
 .icon-Profile:before {
-  content: "\e902";
+  	content: "\e902";
 }
 .icon-Email:before {
-  content: "\e903";
+  	content: "\e903";
 }
 .icon-Send:before {
-  content: "\e906";
+  	content: "\e906";
 }
 .icon-Message:before {
-  content: "\e907";
+  	content: "\e907";
 }
 
 /*//- Media Queries -//*/
 
 @media only screen and (max-width: 1180px) {
-		.formPhoto img {
-	width: 50%;
-}
+	.formPhoto img {
+		width: 50%;
+	}
 }
 @media only screen and (max-width: 1020px) {
 	.individualSkill img {
 		margin-bottom: 180px;
 	}
 	.formPhoto img {
-	display: none;
+		display: none;
 	}
 	.form {
-    width: 70%;
-	margin-left: auto;
-	margin-right: auto;
-
+    	width: 70%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 @media only screen and (max-width: 850px) {
+	.primaryNavBar {
+		position: absolute;
+		display: block;
+	}
+	.logo {
+    	display: inline-block;
+    	float: none;
+    	clear: none;
+    	margin: 10px 0px 10px 0px;
+	}
+	.secondaryLogo {
+		display: block;
+	}
+	.secondaryLogo span {
+		padding-left: 30px;
+		font-size: 16px;
+	}
+	.hamburgerMenu {
+		display: inline-block;
+	}
+	.pageLinks {
+		display: none;
+		margin-top: -5px;
+		width: 200px;
+		height: 100vh;
+		padding: 20px 0px 20px 10px;
+		background: -webkit- #fbf6eb;
+    	background: -o-#fbf6eb;
+    	background: -moz-#fbf6eb;
+    	background: #fbf6eb; 
+	}	
+	.pageLinks span {
+		display: inline-block;
+	}
+	nav ul {
+		padding-left: 20px;
+	}
+	nav li {
+    	display: block;
+		text-align: left;
+    	padding-right: 0px;
+    	margin-right: 0px;
+	}
+	.primaryNavBar li {
+		margin-top: 30px;
+    	border-right: none;
+	}
 	.individualSkill img {
 		margin-bottom: 220px;
+	}
+	.testimonyBG {
+		height: 550px;
+	}
+	.contact {
+		margin: 450px 20px 0 20px;
 	}
 }
